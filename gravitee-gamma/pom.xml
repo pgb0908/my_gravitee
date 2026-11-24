@@ -33,43 +33,8 @@
 
     <name>Gravitee.io Gamma</name>
 
-    <properties>
-        <!-- Used by yarn-workspace-install and UI module Nx builds; override with -Dskip.ui.build=true to skip. -->
-        <skip.ui.build>false</skip.ui.build>
-        <exec-maven-plugin.version>3.6.4</exec-maven-plugin.version>
-    </properties>
-
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>${exec-maven-plugin.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <executions>
-                    <!-- Single workspace install at repo root before submodules run Nx (avoids parallel yarn install on the same tree). Use -am when building a single UI module so this reactor project runs first. -->
-                    <execution>
-                        <id>yarn-workspace-install</id>
-                        <phase>generate-resources</phase>
-                        <goals><goal>exec</goal></goals>
-                        <configuration>
-                            <executable>yarn</executable>
-                            <workingDirectory>${project.basedir}/..</workingDirectory>
-                            <arguments>
-                                <argument>install</argument>
-                            </arguments>
-                            <skip>${skip.ui.build}</skip>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
             <!-- Resolve mockito-core jar location into ${org.mockito:mockito-core:jar} so we can pass it to surefire as a static javaagent below. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -98,10 +63,5 @@
 
     <modules>
         <module>gravitee-gamma-definition-model</module>
-        <module>gravitee-gamma-plugin</module>
-        <module>gravitee-gamma-rest-api</module>
-        <module>gravitee-gamma-module-apim</module>
-        <module>gravitee-gamma-module-platform</module>
-        <module>gravitee-gamma-module-portals</module>
     </modules>
 </project>

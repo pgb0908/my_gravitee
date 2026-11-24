@@ -1,9 +1,0 @@
-{
-    "scripts": {
-        "predanger": "yarn",
-        "danger": "danger ci"
-    },
-    "devDependencies": {
-        "danger": "14.0.7"
-    }
-}

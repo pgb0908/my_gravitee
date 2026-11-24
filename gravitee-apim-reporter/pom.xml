@@ -32,10 +32,7 @@
     <name>Gravitee.io APIM - Reporter</name>
 
     <modules>
-        <module>gravitee-apim-reporter-coverage</module>
         <module>gravitee-apim-reporter-common</module>
-        <module>gravitee-apim-reporter-elasticsearch</module>
-        <module>gravitee-apim-reporter-file</module>
     </modules>
 
     <dependencies>

@@ -34,10 +34,6 @@
 
     <modules>
         <module>gravitee-apim-gateway-services-sync</module>
-        <module>gravitee-apim-gateway-services-healthcheck</module>
-        <module>gravitee-apim-gateway-services-heartbeat</module>
-        <module>gravitee-apim-gateway-services-endpoint-discovery</module>
-        <module>gravitee-apim-gateway-services-debug</module>
     </modules>
 
     <dependencies>
