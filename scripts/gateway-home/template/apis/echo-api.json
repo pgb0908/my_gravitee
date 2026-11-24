@@ -1,0 +1,12 @@
+{
+  "apiEvent": {
+    "id": "evt-echo-api",
+    "type": "PUBLISH_API",
+    "payload": "{\"id\": \"echo-api\", \"name\": \"echo-api\", \"environmentId\": \"DEFAULT\", \"definitionVersion\": \"4.0.0\", \"type\": \"PROXY\", \"lifecycleState\": \"STARTED\", \"definition\": \"{\\\"id\\\": \\\"echo-api\\\", \\\"name\\\": \\\"echo-api\\\", \\\"apiVersion\\\": \\\"1.0\\\", \\\"definitionVersion\\\": \\\"4.0.0\\\", \\\"type\\\": \\\"proxy\\\", \\\"listeners\\\": [{\\\"type\\\": \\\"http\\\", \\\"paths\\\": [{\\\"path\\\": \\\"/echo\\\"}], \\\"entrypoints\\\": [{\\\"type\\\": \\\"http-proxy\\\"}]}], \\\"endpointGroups\\\": [{\\\"name\\\": \\\"default-group\\\", \\\"type\\\": \\\"http-proxy\\\", \\\"endpoints\\\": [{\\\"name\\\": \\\"default\\\", \\\"type\\\": \\\"http-proxy\\\", \\\"weight\\\": 1, \\\"inheritConfiguration\\\": false, \\\"configuration\\\": {\\\"target\\\": \\\"http://localhost:8081\\\"}}]}], \\\"plans\\\": [{\\\"id\\\": \\\"keyless-plan\\\", \\\"name\\\": \\\"Keyless\\\", \\\"mode\\\": \\\"standard\\\", \\\"status\\\": \\\"published\\\", \\\"security\\\": {\\\"type\\\": \\\"key-less\\\"}, \\\"flows\\\": []}], \\\"flows\\\": [], \\\"analytics\\\": {\\\"enabled\\\": false}}\"}",
+    "properties": {
+      "api_id": "echo-api",
+      "deployment_number": "1"
+    },
+    "createdAt": 1732400000000
+  }
+}
